@@ -1,0 +1,5 @@
+# dsh-plan-strict bundle patch
+# 前置依赖 dsh-purge-community；未破甲时插件惰性（RPC 返回 purge-not-installed）。
+- insert:
+    - id: plan-strict
+      name: 'dsh-plan-strict'
