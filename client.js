@@ -165,4 +165,5 @@ window.__ModuleLoader__.load({ id: "dsh-plan-strict", factory: (require) => {
   exports.name = name;
   exports.inject = inject;
   exports.apply = apply;
+  return module.exports;
 }});
