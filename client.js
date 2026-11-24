@@ -13,6 +13,7 @@ window.__ModuleLoader__.load({ id: "dsh-plan-strict", factory: (require) => {
   const NS = "panel.dsh-plan-strict";
 
   const zh = {
+    nav: "计划模式",
     title: "计划模式严格",
     subtitle: "dsh-purge #63 单补丁开关 · 官方原文逐字节恢复",
     env: "破甲环境",
@@ -35,6 +36,7 @@ window.__ModuleLoader__.load({ id: "dsh-plan-strict", factory: (require) => {
     note: "purge 点「应用」重打后，宿主重启时自动纠正回期望态"
   };
   const en = {
+    nav: "Plan Mode",
     title: "Plan Mode Strict",
     subtitle: "Single-patch switch for dsh-purge #63 · byte-exact official restore",
     env: "Purge environment",
@@ -140,25 +142,12 @@ window.__ModuleLoader__.load({ id: "dsh-plan-strict", factory: (require) => {
     );
   }
 
-  function Icon() {
-    return h("span", { "aria-hidden": true },
-      h("svg", { width: 16, height: 16, viewBox: "0 0 16 16" },
-        h("circle", { cx: 8, cy: 8, r: 6.5, fill: "none", stroke: "currentColor", strokeWidth: 1.5 }),
-        h("path", { d: "M5 8 L7 10 L11.2 5.8", fill: "none", stroke: "currentColor", strokeWidth: 1.5 })
-      )
-    );
-  }
-
   function apply(ctx) {
     ctx.effect(() => ctx.locale.register(NS, { zh, en }), "plan-strict locale");
     const t = ctx.locale.bind(NS);
-    ctx.slots.inject("main", () => ctx.slots.register(
-      { name: "main", key: "dsh-plan-strict", inject: () => ({ t }) },
+    ctx.slots.inject("settings.section", () => ctx.slots.register(
+      { name: "settings.section", id: "dsh-plan-strict", order: 10, label: () => t("nav"), locale: NS, inject: () => ({ t }) },
       Page
-    ));
-    ctx.slots.inject("sidebar.panellist", () => ctx.slots.register(
-      { name: "sidebar.panellist", id: "dsh-plan-strict", order: 31, label: "Plan", inject: () => ({ t }) },
-      Icon
     ));
   }
 

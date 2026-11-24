@@ -2,7 +2,7 @@
 
 dsh-purge #63（OFFICIAL_PLAN_MODE_NEUTRAL，计划模式软化）的**单补丁开关**：在「严格官方计划模式」与「破甲软化计划模式」之间一键切换，四目标 × 三处句子**逐字节可逆替换**。
 
-![面板：计划模式严格开关（lab 实测截图）](docs/panel.png)
+![设置页：计划模式严格开关（lab 实测截图）](docs/settings.png)
 
 ## 它解决什么
 
@@ -28,7 +28,7 @@ https://github.com/vandoor7-droid/dsh-plan-strict
 
 ## 使用
 
-- **面板**：左侧栏「Plan」入口（与 Purge 并列）——状态三行（破甲环境/期望态/磁盘态）+ 严格/软化双按钮 + 四文件逐条状态
+- **面板**：设置页「计划模式」标签（与「模型切换」并列）——状态三行（破甲环境/期望态/磁盘态）+ 严格/软化双按钮 + 四文件逐条状态
 - **CLI**（免宿主）：
 ```sh
 node scripts/plan-strict.mjs status   # 查看当前态
