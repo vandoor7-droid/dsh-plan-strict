@@ -11,7 +11,7 @@
   "license": "MIT",
   "engines": { "node": ">=20" },
   "scripts": { "test": "node --test tests/" },
-  "files": ["lib", "client.js", "scripts", "cordis.patch.yml", "README.md", "LICENSE", "AGENTS.md"],
+  "files": ["lib", "client.js", "scripts", "docs/panel.png", "cordis.patch.yml", "README.md", "CHANGELOG.md", "LICENSE", "AGENTS.md"],
   "peerDependencies": {
     "@deepseek-ai/cordis": ">=4.0.4 <5.0.0"
   },
